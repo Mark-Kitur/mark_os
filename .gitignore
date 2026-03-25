@@ -1,0 +1,59 @@
+.vscode/
+# build output
+*/tmp/
+*/cache/
+*/sstate-cache/
+*/build/temp/
+tmp/
+cache/
+sstate-cache/
+
+# WIC /images / deploy artifacts
+*/deploy/
+deploy/
+*.wic
+*.wic.gz
+*.wic.bz2
+*.sdcard
+*.img
+*.iso
+*.holding
+
+# log files
+*.log
+*.run
+*.stamp
+*.siginfo
+
+# DL_DIR
+downloads/
+DL_DIR/
+*/dowloads/
+
+# Kenrel build artifacts
+*.ko
+*.o
+*.mod   
+*.mod.c
+*.symvers
+*.order
+#git submodules
+*/.git/
+layers/*/.git/
+
+#python bytecode
+*.pyc
+__pycache__/
+
+#Editor juck files
+*swp
+*~
+*.swo
+*.tmp
+
+#vs code
+.vscode/
+.vscode-insiders/
+
+#others
+/layers

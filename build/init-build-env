@@ -1,0 +1,6 @@
+# init-build-env wrapper created by bitbake-setup
+cd /home/mark/yocto_ws/bitbake-builds/mark_os/layers/openembedded-core
+set /home/mark/yocto_ws/bitbake-builds/mark_os/build
+. ./oe-init-build-env
+set --
+
