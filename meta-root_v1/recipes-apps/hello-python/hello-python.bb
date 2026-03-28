@@ -1,13 +1,37 @@
-SUMMARY = "A simple hello world application written in Python."
-LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://${THISDIR}/LICENSE;md5=59a892df105a057157407c8452becd72"
+# Recipe created by recipetool
+# This is the basis of a recipe and may need further editing in order to be fully functional.
+# (Feel free to remove these comments when editing.)
 
+# Unable to find any files that looked like license statements. Check the accompanying
+# documentation and source headers and set LICENSE and LIC_FILES_CHKSUM accordingly.
+#
+# NOTE: LICENSE is being set to "CLOSED" to allow you to at least start building - if
+# this is not accurate with respect to the licensing of the software being built (it
+# will not be in most cases) you must specify the correct value before using this
+# recipe for anything other than initial testing/development!
+LICENSE = "MIT"
+LIC_FILES_CHKSUM = "file://${THISDIR}/LICENSE;md5=d41d8cd98f00b204e9800998ecf8427e"
+
+# No information for SRC_URI yet (only an external source tree was specified)
 SRC_URI = "file://hello.py"
 
-# Required for file-only recipes in modern Yocto
-S = "${WORKDIR}"
+S = "${UNPACKDIR}"
 
-do_install() {
-    install -d ${D}${bindir}
-    install -m 0755 ${WORKDIR}/hello.py ${D}${bindir}/hello-python
+# NOTE: no Makefile found, unable to determine what needs to be done
+
+do_configure () {
+	# Specify any needed configure commands here
+	:
 }
+
+do_compile () {
+	# Specify compilation commands here
+	:
+}
+
+do_install () {
+	# Specify install commands here
+	install -d ${D}${bindir}
+	install -m 0755 ${S}/hello.py ${D}${bindir}/hello-python
+}
+
