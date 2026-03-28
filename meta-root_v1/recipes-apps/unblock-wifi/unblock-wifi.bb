@@ -8,7 +8,12 @@ LICENSE = "Proprietary"
 LIC_FILES_CHKSUM = "file://${THISDIR}/LICENSE;md5=d41d8cd98f00b204e9800998ecf8427e"
 
 # No information for SRC_URI yet (only an external source tree was specified)
-SRC_URI = "file://unblock.sh"
+SRC_URI = "\
+	file://unblock.sh\ 
+	file://unblock-wifi.service\
+	"
+
+inherit systemd
 
 S = "${UNPACKDIR}"
 
@@ -29,5 +34,11 @@ do_install () {
 	:
 	install -d ${D}${bindir}
 	install -m 0755 ${S}/unblock.sh ${D}${bindir}/unblock-wifi
+
+	install -d ${D}${systemd_unitdir}/system
+	install -m 0644 ${S}/unblock-wifi.service ${D}${systemd_unitdir}/system/
 }
+
+SYSTEMD_AUTO_ENABLE = "enable"	
+SYSTEMD_SERVICE:${PN} = "unblock-wifi.service"
 
