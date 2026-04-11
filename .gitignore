@@ -1,0 +1,68 @@
+############################
+# Editor files
+############################
+.vscode/
+.vscode-insiders/
+*~
+*.swp
+*.swo
+
+############################
+# Yocto build directories
+############################
+build/
+layers/
+tmp/
+*/tmp/
+sstate-cache/
+*/sstate-cache/
+downloads/
+*/downloads/
+
+############################
+# Deployment artifacts
+############################
+deploy/
+*/deploy/
+*.wic
+*.wic.gz
+*.wic.bz2
+*.sdcard
+*.img
+*.iso
+
+############################
+# Logs and metadata
+############################
+*.log
+*.stamp
+*.run
+*.siginfo
+
+############################
+# Kernel build artifacts
+############################
+*.o
+*.ko
+*.mod
+*.mod.c
+*.symvers
+*.order
+
+############################
+# Python cache
+############################
+__pycache__/
+*.pyc
+
+############################
+# Git submodules (avoid nested repos)
+############################
+.git/
+*/.git/
+
+############################
+# Temporary / local test folders
+############################
+temp-test_1/
+config/

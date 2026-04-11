@@ -1,0 +1,11 @@
+[Unit]
+Description=Unblock Wi-Fi at boot
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/unblock-wifi
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
