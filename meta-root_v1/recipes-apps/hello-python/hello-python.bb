@@ -16,6 +16,8 @@ LIC_FILES_CHKSUM = "file://${THISDIR}/LICENSE;md5=d41d8cd98f00b204e9800998ecf842
 SRC_URI = "file://hello.py"
 
 S = "${UNPACKDIR}"
+# adding gobject-introspection to the recipe to allow it to be used in the future if needed
+inherit gobject-introspection
 
 # NOTE: no Makefile found, unable to determine what needs to be done
 
