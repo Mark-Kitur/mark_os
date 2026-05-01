@@ -1,4 +1,4 @@
-![](/home/mark/yocto_ws/bitbake-builds/mark_os/meta-myowndisto/recipe-core/psplash/files/logo.png)
+![Logo](https://raw.githubusercontent.com/Mark-Kitur/mark_os/main/meta-myowndisto/recipe-core/psplash/files/logo.png)
 Mark OS – Embedded Linux Learning Platform (Yocto + Custom Layers)
 
 Mark OS is a structured learning project focused on understanding, customizing, and building embedded Linux systems using the Yocto Project.
