@@ -14,6 +14,14 @@ LIC_FILES_CHKSUM = "file://${THISDIR}/LICENSE;md5=d41d8cd98f00b204e9800998ecf842
 
 # No information for SRC_URI yet (only an external source tree was specified)
 SRC_URI = "file://hello.py"
+PV = "1.0"
+PR = "r0"
+
+# for knowledge, next time i will use this format for auto-updating from git repositories:
+# SRC_URI = "git://github.com/...;branch=main"
+# PV = "1.0+git${SRCPV}"
+
+
 
 S = "${UNPACKDIR}"
 # adding gobject-introspection to the recipe to allow it to be used in the future if needed
