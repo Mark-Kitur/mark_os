@@ -15,39 +15,6 @@ Prepare groundwork for later phases (kernel development, security modules, BSP w
 
 This repository grows as I progress through each learning milestone.
 
-## Repository Structure
-
-
-mark_os/
-├── README.md
-├── build/
-│   └── conf/
-│       ├── local.conf
-│       └── bblayers.conf
-│
-├── meta-myowndisto/                 
-│   ├── conf/
-│   │   ├── distro/
-│   │   │   └── myowndisto.conf
-│   │   └── layer.conf
-│   ├── COPYING.MIT
-│   ├── README.md
-│   ├── recipe-core/
-│   │   └── psplash/
-│   │       ├── files/
-│   │       │   ├── logo.png
-│   │       │   └── logo-img.h
-│   │       └── psplash_%.bbappend
-│   └── recipes-example/
-│       └── example/
-│           └── example_0.1.bb
-│
-└── meta-root_v1/                   
-    ├── conf/
-    │   └── layer.conf
-    ├── recipes-core/
-    ├── recipes-apps/
-    └── README.md
 
 
 What each directory is for
@@ -106,7 +73,7 @@ bitbake core-image-minimal
 
 After a successful build:
 
-build/tmp/deploy/images/<machine>/
+build/tmp/deploy/images/raspberrypi5/
 
 The documentation grows as I proceed through the roadmap.
 Roadmap (Learning Phase Preview)
