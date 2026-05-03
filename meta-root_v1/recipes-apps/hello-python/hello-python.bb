@@ -39,9 +39,50 @@ do_compile () {
 	:
 }
 
-do_install () {
-	# Specify install commands here
-	install -d ${D}${bindir}
-	install -m 0755 ${S}/hello.py ${D}${bindir}/hello-python
+do_install() {
+    bbdebug 2 "Running do_my_function"
+    if [ exceptional_condition ]; then
+        bbnote "Hit exceptional_condition"
+    fi
+    bbdebug 2  "Got to point xyz"
+    if [ warning_trigger ]; then
+        bbwarn "Detected warning_trigger, this might cause a problem later."
+    fi
+    if [ recoverable_error ]; then
+        bberror "Hit recoverable_error, correcting"
+    fi
+    if [ fatal_error ]; then
+        bbfatal "fatal_error detected"
+    fi
+    bbdebug 2 "Completed do_my_function"
+
+    install -d ${D}${bindir}
+    install -m 0755 ${S}/hello.py ${D}${bindir}/hello-python
 }
 
+python do_listtasks() {
+    bb.debug(2, "Starting to figure out the task list")
+
+    noteworthy_condition = True
+    warning_trigger = True
+    recoverable_error = False
+    fatal_error = False
+
+    if noteworthy_condition:
+        bb.note("There are 13 tasks to run")
+
+    bb.debug(2, "Got to point XYZ")
+
+    if warning_trigger:
+        bb.warn("Warning trigger hit!")
+
+    if recoverable_error:
+        bb.error("Recoverable error detected")
+
+    if fatal_error:
+        bb.fatal("Fatal error: cannot continue")
+
+    bb.plain("Tasks present are: abc, def, ghi")
+
+    bb.debug(2, "Finished figuring out the task list")
+}
