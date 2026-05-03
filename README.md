@@ -15,7 +15,9 @@ Prepare groundwork for later phases (kernel development, security modules, BSP w
 
 This repository grows as I progress through each learning milestone.
 
-Repository Structure
+## Repository Structure
+
+
 mark_os/
 ├── README.md
 ├── build/
@@ -23,12 +25,30 @@ mark_os/
 │       ├── local.conf
 │       └── bblayers.conf
 │
-├── meta-root_v1/
+├── meta-myowndisto/                 
 │   ├── conf/
+│   │   ├── distro/
+│   │   │   └── myowndisto.conf
 │   │   └── layer.conf
-│   ├── recipes-core/
-│   ├── recipes-apps/
-│   └── README.md
+│   ├── COPYING.MIT
+│   ├── README.md
+│   ├── recipe-core/
+│   │   └── psplash/
+│   │       ├── files/
+│   │       │   ├── logo.png
+│   │       │   └── logo-img.h
+│   │       └── psplash_%.bbappend
+│   └── recipes-example/
+│       └── example/
+│           └── example_0.1.bb
+│
+└── meta-root_v1/                   
+    ├── conf/
+    │   └── layer.conf
+    ├── recipes-core/
+    ├── recipes-apps/
+    └── README.md
+
 
 What each directory is for
 build/conf/
