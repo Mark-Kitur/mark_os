@@ -1,0 +1,29 @@
+From 7e0a754624498c6c861cb819e9a2233e9071c7ff Mon Sep 17 00:00:00 2001
+From: Mark-Kitur <kimutai.workspace@gmail.com>
+Date: Fri, 15 May 2026 13:14:50 +0300
+Subject: [PATCH]  callibrate: Add printk example
+
+Upstream-Status: Inappropriate [local debugging]
+
+---
+ init/calibrate.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+diff --git a/init/calibrate.c b/init/calibrate.c
+index f3831272f113..3914467a6b92 100644
+--- a/init/calibrate.c
++++ b/init/calibrate.c
+@@ -278,6 +278,13 @@ void calibrate_delay(void)
+ 	static bool printed;
+ 	int this_cpu = smp_processor_id();
+ 
++	
++    printk("*************************************\n");
++    printk("*                                   *\n");
++    printk("*        HELLO YOCTO KERNEL         *\n");
++    printk("*                                   *\n");
++    printk("*************************************\n");
++
+ 	if (per_cpu(cpu_loops_per_jiffy, this_cpu)) {
+ 		lpj = per_cpu(cpu_loops_per_jiffy, this_cpu);
+ 		if (!printed)
