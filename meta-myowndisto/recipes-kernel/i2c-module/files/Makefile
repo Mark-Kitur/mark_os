@@ -1,4 +1,4 @@
-obj-m += hello-kernel.o
+obj-m += i2c_driver.o
 
 SRC := ${shell pwd}
 
