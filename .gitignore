@@ -66,3 +66,6 @@ __pycache__/
 ############################
 temp-test_1/
 config/
+
+
+bitbake.code-workspace
