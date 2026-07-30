@@ -1,0 +1,81 @@
+From 9bdf3882898a3ccd2b3aab8fb243fa436261f300 Mon Sep 17 00:00:00 2001
+From: Mark-Kitur <kimutai.workspace@gmail.com>
+Date: Thu, 30 Jul 2026 13:10:55 +0300
+Subject: [PATCH]  adding .egg-info
+
+---
+ speedometer.egg-info/PKG-INFO             |  6 ++++++
+ speedometer.egg-info/SOURCES.txt          | 22 ++++++++++++++++++++++
+ speedometer.egg-info/dependency_links.txt |  1 +
+ speedometer.egg-info/entry_points.txt     |  2 ++
+ speedometer.egg-info/top_level.txt        |  1 +
+ 5 files changed, 32 insertions(+)
+ create mode 100644 speedometer.egg-info/PKG-INFO
+ create mode 100644 speedometer.egg-info/SOURCES.txt
+ create mode 100644 speedometer.egg-info/dependency_links.txt
+ create mode 100644 speedometer.egg-info/entry_points.txt
+ create mode 100644 speedometer.egg-info/top_level.txt
+
+diff --git a/speedometer.egg-info/PKG-INFO b/speedometer.egg-info/PKG-INFO
+new file mode 100644
+index 0000000..a4fd255
+--- /dev/null
++++ b/speedometer.egg-info/PKG-INFO
+@@ -0,0 +1,6 @@
++Metadata-Version: 2.4
++Name: speedometer
++Version: 0.1.0
++Summary: PyQt5 automotive dashboard
++Author-email: Mark Kitur <kiturmark@gmail.com>
++Requires-Python: >=3.10
+diff --git a/speedometer.egg-info/SOURCES.txt b/speedometer.egg-info/SOURCES.txt
+new file mode 100644
+index 0000000..e01b616
+--- /dev/null
++++ b/speedometer.egg-info/SOURCES.txt
+@@ -0,0 +1,22 @@
++pyproject.toml
++speedometer/arduino_data.py
++speedometer/dashboard.py
++speedometer/display_symbols.py
++speedometer/fuel_tmp.py
++speedometer/radio.ui
++speedometer/stick_display.py
++speedometer.egg-info/PKG-INFO
++speedometer.egg-info/SOURCES.txt
++speedometer.egg-info/dependency_links.txt
++speedometer.egg-info/entry_points.txt
++speedometer.egg-info/top_level.txt
++speedometer/icons/abs.png
++speedometer/icons/air-bag_13401736.png
++speedometer/icons/battery.png
++speedometer/icons/check_engine.png
++speedometer/icons/door_open.png
++speedometer/icons/head_lights.png
++speedometer/icons/oil-indicator_1633107.png
++speedometer/icons/seat_belt.png
++speedometer/icons/streering_dis.png
++speedometer/icons/tire-pressure_6380752.png
+\ No newline at end of file
+diff --git a/speedometer.egg-info/dependency_links.txt b/speedometer.egg-info/dependency_links.txt
+new file mode 100644
+index 0000000..8b13789
+--- /dev/null
++++ b/speedometer.egg-info/dependency_links.txt
+@@ -0,0 +1 @@
++
+diff --git a/speedometer.egg-info/entry_points.txt b/speedometer.egg-info/entry_points.txt
+new file mode 100644
+index 0000000..2be8c97
+--- /dev/null
++++ b/speedometer.egg-info/entry_points.txt
+@@ -0,0 +1,2 @@
++[console_scripts]
++spedo = speedometer.dashboard:main
+diff --git a/speedometer.egg-info/top_level.txt b/speedometer.egg-info/top_level.txt
+new file mode 100644
+index 0000000..188c412
+--- /dev/null
++++ b/speedometer.egg-info/top_level.txt
+@@ -0,0 +1 @@
++speedometer
