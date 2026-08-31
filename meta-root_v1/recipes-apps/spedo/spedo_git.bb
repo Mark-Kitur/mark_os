@@ -18,7 +18,7 @@ SRC_URI = "git://github.com/Mark-Kitur/speedometer.git;protocol=https;branch=mai
 
 # Modify these as desired
 PV = "0.1.0+git"
-SRCREV = "3a76b115affee179559a0c1d360efedbab2ec7fa"
+SRCREV = "eeacca88184e17e729e4deac0b9c82b1ff8db827"
 
 inherit python_setuptools_build_meta
 
